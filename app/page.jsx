@@ -17,7 +17,7 @@ const Home = () => {
               Pricing Actuary, PhD, ASA, AIA
             </span>
             <h1 className="h1">
-              Hello I'm <br />
+              Hello I&apos;m <br />
               <span className="text-accent">Rohan Yashraj Gupta</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
