@@ -12,19 +12,9 @@ const experience = {
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eligendi deleniti, sed sapiente nemo quis.",
   items: [
     {
-      company: "Tech Actuarial",
-      position: "Research Assistant",
-      duration: "Jun 2017- Jun 2019",
-    },
-    {
-      company: "Tech Actuarial",
-      position: "Actuarial Consultant",
-      duration: "Jun 2019 - Jun 2021",
-    },
-    {
-      company: "SwissRe",
-      position: "Actuarial Analyst",
-      duration: "Jun 2021 - Dec 2022",
+      company: "Accenture",
+      position: "Actuarial Team Lead",
+      duration: "Jul 2023 - present",
     },
     {
       company: "RSA",
@@ -32,9 +22,24 @@ const experience = {
       duration: "Dec 2022 - Jul 2023",
     },
     {
-      company: "Accenture",
-      position: "Actuarial Team Lead",
-      duration: "Jul 2023 - present",
+      company: "SwissRe",
+      position: "Actuarial Analyst",
+      duration: "Jun 2021 - Dec 2022",
+    },
+    {
+      company: "Tech Actuarial",
+      position: "Actuarial Consultant",
+      duration: "Jun 2019 - Jun 2021",
+    },
+    {
+      company: "Casualty Actuarial Society",
+      position: "CAS Summer Internship Program",
+      duration: "Jun 2020 - Aug 2020",
+    },
+    {
+      company: "Tech Actuarial",
+      position: "Research Associate",
+      duration: "Jun 2017- Jun 2019",
     },
   ],
 };
@@ -47,28 +52,28 @@ const education = {
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eligendi deleniti, sed sapiente nemo quis.",
   items: [
     {
-      institution: "Institute and Faculty of Actuaries",
+      institution: "IFoA",
       degree: "AIA",
       duration: "2021 - Present",
     },
     {
-      institution: "Society of Actuaries",
+      institution: "SOA",
       degree: "ASA",
       duration: "2021 - Present",
     },
     {
       institution: "Sri Sathya Sai Institute of Higher Learning",
-      degree: "Doctor of Philosophy",
+      degree: "PhD, Actuarial Science",
       duration: "Jun 2019 - Nov 2021",
     },
     {
       institution: "Sri Sathya Sai Institute of Higher Learning",
-      degree: "Masters in Mathematics",
+      degree: "M.Sc. Mathematics",
       duration: "Jun 2017 - Jun 2019",
     },
     {
       institution: "Sri Sathya Sai Institute of Higher Learning",
-      degree: "Bachelors of Science (Hons)",
+      degree: "B.Sc.(Hons) Mathematics",
       duration: "Jun 2017 - Jun 2019",
     },
   ],
@@ -85,8 +90,8 @@ const skills = {
       name: "Python",
     },
     {
-      icon: <FaPython />,
-      name: "Python",
+      icon: <FaRProject />,
+      name: "R",
     },
     {
       icon: <FaPython />,
@@ -106,8 +111,7 @@ const skills = {
 // about data
 const about = {
   title: "About Me",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero, ab omnis asperiores facere cupiditate!",
+  description: "Here is all the information you need to contact me!",
   info: [
     {
       fieldName: "Name",
@@ -123,7 +127,7 @@ const about = {
     },
     {
       fieldName: "Nationality",
-      fieldValue: "Idian",
+      fieldValue: "Indian",
     },
     {
       fieldName: "Email",
@@ -282,7 +286,7 @@ const Resume = () => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
+                        className="flex items-center justify-start xl:justify-start gap-4"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
