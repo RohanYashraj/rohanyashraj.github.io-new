@@ -27,7 +27,8 @@ const Header = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden">
+        <div className="flex gap-8 xl:hidden">
+          <ThemeToggle />
           <MobileNav />
         </div>
       </div>
