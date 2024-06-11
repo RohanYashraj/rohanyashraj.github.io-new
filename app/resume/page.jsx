@@ -91,17 +91,17 @@ const skills = {
     {
       icon: <FaRProject />,
       name: "R",
-      progress: "70",
+      progress: "80",
     },
     {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
-      progress: "70",
+      progress: "50",
     },
     {
       icon: <SiNextdotjs />,
       name: "Next.js",
-      progress: "70",
+      progress: "50",
     },
   ],
 };
@@ -149,6 +149,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
+import ProgressBar2 from "@/components/Progress";
 
 const Resume = () => {
   return (
@@ -178,10 +179,8 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] mx-auto xl:mx-0">
-                  {experience.description}
-                </p>
-                <ScrollArea className="h-[480px]">
+                <p className=" mx-auto xl:mx-0">{experience.description}</p>
+                <ScrollArea className="h-full pb-10">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
@@ -212,10 +211,8 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] mx-auto xl:mx-0">
-                  {education.description}
-                </p>
-                <ScrollArea className="h-[480px]">
+                <p className=" mx-auto xl:mx-0">{education.description}</p>
+                <ScrollArea className="h-full pb-10">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
@@ -249,19 +246,20 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-primary dark:text-white/60 mx-auto xl:mx-0">
+                  <p className=" text-primary dark:text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-secondary group-hover:text-light dark:group-hover:text-accent transition-all duration-300">
+                            <TooltipTrigger className="w-full h-[150px] border dark:border-none border-primary dark:bg-[#232329] rounded-xl group">
+                              <div className="flex justify-center items-center p-4 gap-4 tect-light dark:text-secondary group-hover:text-light dark:group-hover:text-accent transition-all duration-300">
                                 <div className="text-6xl">{skill.icon}</div>
+                                <Progress value={skill.progress} />
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>

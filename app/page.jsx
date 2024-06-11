@@ -22,7 +22,7 @@ const Home = () => {
                 Rohan Yashraj Gupta
               </span>
             </h1>
-            <p className="max-w-[500px] mb-9">
+            <p className="max-w-[500px] mb-9 pt-4">
               As a highly skilled and experienced Actuarial Data Science
               professional with a Ph.D., I am an Associate of the Institute of
               Actuaries and Associate of Society of Actuaries with over 7 years
