@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { FaGithub, FaLinkedinIn, FaResearchgate } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 
 const socials = [
   {
@@ -14,6 +15,10 @@ const socials = [
   {
     icon: <FaResearchgate />,
     path: "https://www.researchgate.net/profile/Rohan_Gupta54",
+  },
+  {
+    icon: <BiLogoGmail />,
+    path: "mailto:rohanyashraj@gmail.com",
   },
 ];
 

@@ -8,16 +8,16 @@ import StairTransition from "@/components/StairTransition";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
+export const metadata = {
+  title: "Dr. Rohan Yashraj Gupta, ASA, AIA",
+  description: "Rohan Yashraj Gupta's portfolio website",
+};
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-jetbrainsMono",
 });
-
-export const metadata = {
-  title: "Dr. Rohan Yashraj Gupta, ASA, AIA",
-  description: "Rohan's portfolio website",
-};
 
 export default function RootLayout({ children }) {
   return (

@@ -1,15 +1,14 @@
 "use client";
 
-import { Description } from "@radix-ui/react-dialog";
 import { FaPython, FaRProject, FaHtml5, FaCss3, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 // experience data
 const experience = {
   icon: "assets/resume/badge.svg",
-  title: "My experience",
+  title: "Work Experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eligendi deleniti, sed sapiente nemo quis.",
+    "Explore my professional journey through diverse roles and impactful projects.",
   items: [
     {
       company: "Accenture",
@@ -47,9 +46,8 @@ const experience = {
 // education data
 const education = {
   icon: "assets/resume/badge.svg",
-  title: "My education",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eligendi deleniti, sed sapiente nemo quis.",
+  title: "My Education",
+  description: "Learn about my academic background and qualifications.",
   items: [
     {
       institution: "IFoA",
@@ -81,9 +79,9 @@ const education = {
 
 // skills data
 const skills = {
-  title: "My skills",
+  title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut sapiente, corrupti consequatur fugiat dolorem!",
+    "Discover the array of skills and expertise I bring to the table.",
   skillList: [
     {
       icon: <FaPython />,
@@ -167,7 +165,7 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="experience">Work Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>

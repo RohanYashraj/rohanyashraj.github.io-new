@@ -1,8 +1,8 @@
 "use client";
 
-import { Description } from "@radix-ui/react-dialog";
 import Link from "next/link";
 import { BsArrowDownRight } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -41,8 +41,6 @@ const services = [
     href: "",
   },
 ];
-
-import { motion } from "framer-motion";
 
 const Services = () => {
   return (
