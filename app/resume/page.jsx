@@ -60,17 +60,17 @@ const education = {
       duration: "2021 - Present",
     },
     {
-      institution: "Sri Sathya Sai Institute of Higher Learning",
+      institution: "SSSIHL",
       degree: "PhD, Actuarial Science",
       duration: "Jun 2019 - Nov 2021",
     },
     {
-      institution: "Sri Sathya Sai Institute of Higher Learning",
+      institution: "SSSIHL",
       degree: "M.Sc. Mathematics",
       duration: "Jun 2017 - Jun 2019",
     },
     {
-      institution: "Sri Sathya Sai Institute of Higher Learning",
+      institution: "SSSIHL",
       degree: "B.Sc.(Hons) Mathematics",
       duration: "Jun 2017 - Jun 2019",
     },
@@ -86,22 +86,22 @@ const skills = {
     {
       icon: <FaPython />,
       name: "Python",
+      progress: "70",
     },
     {
       icon: <FaRProject />,
       name: "R",
-    },
-    {
-      icon: <FaPython />,
-      name: "Python",
+      progress: "70",
     },
     {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
+      progress: "70",
     },
     {
       icon: <SiNextdotjs />,
       name: "Next.js",
+      progress: "70",
     },
   ],
 };
@@ -148,6 +148,7 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { Progress } from "@/components/ui/progress";
 
 const Resume = () => {
   return (
@@ -177,7 +178,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] mx-auto xl:mx-0">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[480px]">
@@ -186,16 +187,18 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="border dark:border-none border-light dark:bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-accent">{item.duration}</span>
+                          <span className="text-light dark:text-accent">
+                            {item.duration}
+                          </span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            <span className="w-[6px] h-[6px] rounded-full bg-light dark:bg-accent"></span>
+                            <p className="dark:text-white/60">{item.company}</p>
                           </div>
                         </li>
                       );
@@ -209,7 +212,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] mx-auto xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[480px]">
@@ -218,16 +221,20 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="border dark:border-none border-light dark:bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
-                          <span className="text-accent">{item.duration}</span>
+                          <span className="text-light dark:text-accent">
+                            {item.duration}
+                          </span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
                             {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
+                            <span className="w-[6px] h-[6px] rounded-full bg-light dark:bg-accent"></span>
+                            <p className="dark:text-white/60">
+                              {item.institution}
+                            </p>
                           </div>
                         </li>
                       );
@@ -242,7 +249,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-primary dark:text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
@@ -253,8 +260,8 @@ const Resume = () => {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {skill.icon}
+                              <div className="text-secondary group-hover:text-light dark:group-hover:text-accent transition-all duration-300">
+                                <div className="text-6xl">{skill.icon}</div>
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
@@ -276,7 +283,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-primary dark:text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-{620px] mx-auto xl:mx-0">
@@ -286,7 +293,9 @@ const Resume = () => {
                         key={index}
                         className="flex items-center justify-start xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-light dark:text-white/60">
+                          {item.fieldName}
+                        </span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
                     );
