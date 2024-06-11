@@ -12,6 +12,7 @@ const Photo = () => {
           opacity: 1,
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
+        className="flex justify-center items-center"
       >
         {/* image */}
         <motion.div
@@ -20,7 +21,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="top-[5px] left-[5px] w-[290px] h-[290px] xl:top-[6px] xl:left-[6px] xl:w-[494px] xl:h-[494px] mix-blend-lighten absolute"
+          className="w-[290px] h-[290px] xl:w-[490px] xl:h-[490px] absolute"
         >
           <Image
             src="/assets/photo.png"
@@ -34,7 +35,7 @@ const Photo = () => {
 
         {/* circle */}
         <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+          className="stroke-light dark:stroke-accent w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +44,6 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
