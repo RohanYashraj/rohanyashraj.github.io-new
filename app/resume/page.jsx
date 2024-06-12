@@ -3,6 +3,19 @@
 import { FaPython, FaRProject, FaHtml5, FaCss3, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
+// components
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
+import { Progress } from "@/components/ui/progress";
+import Timeline from "@/components/Timeline";
+
 // experience data
 const experience = {
   icon: "assets/resume/badge.svg",
@@ -138,19 +151,6 @@ const about = {
   ],
 };
 
-// components
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
-import { Progress } from "@/components/ui/progress";
-import ProgressBar2 from "@/components/Progress";
-
 const Resume = () => {
   return (
     <motion.div
@@ -180,6 +180,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className=" mx-auto xl:mx-0">{experience.description}</p>
+                <Timeline />
                 <ScrollArea className="h-full pb-10">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
