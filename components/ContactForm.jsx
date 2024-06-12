@@ -24,7 +24,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_tetauqe123", "template_g5hivsl", form.current, {
+      .sendForm("service_tetauqe", "template_g5hivsl", form.current, {
         publicKey: "8B9rgtop0ka1YIbkX",
       })
       .then(
