@@ -180,7 +180,6 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className=" mx-auto xl:mx-0">{experience.description}</p>
-                <Timeline />
                 <ScrollArea className="h-full pb-10">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {

@@ -7,6 +7,7 @@ import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "Dr. Rohan Yashraj Gupta, ASA, AIA",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <PageTransition>{children}</PageTransition>
         <SpeedInsights />
         <Analytics />
+        <Toaster />
       </body>
     </html>
   );
