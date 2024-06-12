@@ -26,12 +26,14 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="relative inline-flex items-center h-8 rounded-full w-16 bg-gray-300 dark:bg-gray-500 focus:outline-none transition-colors"
+      className={`relative inline-flex items-center h-8 rounded-full w-16 focus:outline-none transition-colors ${
+        theme === "dark" ? "bg-night" : "bg-daylight"
+      }`}
     >
       <span
         className={`${
           theme === "dark" ? "translate-x-8" : "translate-x-1"
-        } inline-block w-6 h-6 transform bg-white rounded-full transition-transform flex items-center justify-center`}
+        } w-6 h-6 transform bg-white rounded-full transition-transform flex items-center justify-center`}
       >
         {theme === "dark" ? (
           <FaMoon className="text-primary/80" />

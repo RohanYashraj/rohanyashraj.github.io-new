@@ -31,3 +31,14 @@
     -webkit-text-stroke: 1px #00b31e;
   }
 }
+
+/* Custom background images for the toggle button */
+.bg-daylight {
+  background-image: url("/assets/light.png");
+  background-size: cover;
+}
+
+.bg-night {
+  background-image: url("/assets/dark.png");
+  background-size: cover;
+}
