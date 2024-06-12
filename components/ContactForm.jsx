@@ -14,11 +14,13 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { ToastAction } from "./ui/toast";
 
 const ContactForm = () => {
   const { toast } = useToast();
   const form = useRef();
+  console.log("SERVICE ID here: ", process.env.EMAILJS_SERVICE_ID);
+  console.log("TEMPLATE ID here: ", process.env.EMAILJS_TEMPLATE_ID);
+  console.log("PUBLIC KEY here: ", process.env.EMAILJS_PUBLIC_KEY);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,7 +32,7 @@ const ContactForm = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          document.getElementById("ContactForm").reset();
+          document.getElementById("ContactMeForm").reset();
           toast({
             title: "Success",
             description: "Your message has been sent.",
@@ -49,7 +51,7 @@ const ContactForm = () => {
     <>
       <form
         ref={form}
-        id="ContactForm"
+        id="ContactMeForm"
         onSubmit={sendEmail}
         className="flex flex-col gap-6 p-10 bg-secondary border-2 dark:border-none border-light dark:bg-[#27272c] rounded-xl"
       >

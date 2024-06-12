@@ -14,7 +14,6 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
-import Timeline from "@/components/Timeline";
 
 // experience data
 const experience = {
@@ -133,7 +132,7 @@ const about = {
       fieldValue: "+91 9593256368",
     },
     {
-      fieldName: "Experiece",
+      fieldName: "Experience",
       fieldValue: "7 Years",
     },
     {
