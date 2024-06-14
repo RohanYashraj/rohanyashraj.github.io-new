@@ -5,9 +5,10 @@ import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
+// import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
+import { CSPostHogProvider } from "./providers";
 
 export const metadata = {
   title: "Dr. Rohan Yashraj Gupta, ASA, AIA",
@@ -23,14 +24,16 @@ const jetbrainsMono = JetBrains_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetbrainsMono.variable}>
-        <Header />
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
-        <SpeedInsights />
-        <Analytics />
-        <Toaster />
-      </body>
+      <CSPostHogProvider>
+        <body className={jetbrainsMono.variable}>
+          <Header />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+          {/* <SpeedInsights /> */}
+          {/* <Analytics /> */}
+          <Toaster />
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
