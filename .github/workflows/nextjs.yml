@@ -48,6 +48,11 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Setup env variables
+        run: |
+          touch .env.local
+          echo NEXT_PUBLIC_POSTHOG_KEY=${{variable.NEXT_PUBLIC_POSTHOG_KEY}} >> .env.local 
+          echo NEXT_PUBLIC_POSTHOG_HOST=${{variable.NEXT_PUBLIC_POSTHOG_HOST}} >> .env.local
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

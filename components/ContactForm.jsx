@@ -18,9 +18,9 @@ import { useToast } from "@/components/ui/use-toast";
 const ContactForm = () => {
   const { toast } = useToast();
   const form = useRef();
-  console.log("SERVICE ID here: ", process.env.EMAILJS_SERVICE_ID);
-  console.log("TEMPLATE ID here: ", process.env.EMAILJS_TEMPLATE_ID);
-  console.log("PUBLIC KEY here: ", process.env.EMAILJS_PUBLIC_KEY);
+  // console.log("SERVICE ID here: ", process.env.EMAILJS_SERVICE_ID);
+  // console.log("TEMPLATE ID here: ", process.env.EMAILJS_TEMPLATE_ID);
+  // console.log("PUBLIC KEY here: ", process.env.EMAILJS_PUBLIC_KEY);
 
   const sendEmail = (e) => {
     e.preventDefault();
