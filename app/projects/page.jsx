@@ -26,7 +26,7 @@ const projects = [
     description:
       "This project endeavors to deliver a comprehensive research paper outlining a framework for interpretable machine learning algorithms tailored for fraud detection in health insurance. Machine learning algorithms excel at constructing intricate models by discerning patterns in data, yet the risk of overfitting to training data necessitates rigorous testing by modelers and users. While certain validation practices for linear models apply to machine learning, the challenge of interpretability remains pronounced.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/projects/01/image.jpeg",
+    image: "/assets/projects/SOA/image.jpg",
     live: "",
     github: "",
   },
@@ -37,7 +37,7 @@ const projects = [
     description:
       "Health insurance fraud is a significant problem affecting the insurance industry, resulting in billions of dollars in losses annually. We propose a novel approach to fraud detection in health insurance by integrating machine learning (ML) models with business rule triggers to identify unusual patterns in claims data and flag them for further investigation. We have demonstrated that incorporating machine learning models with business rule triggers greatly enhanced the performance across all models.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    image: "/assets/projects/CAS/image.jpg",
     live: "",
     github: "",
   },
@@ -48,7 +48,7 @@ const projects = [
     description:
       "The project involved collaborating with a Property and Casualty Insurer in India. The focus was on group health insurance scheme, covering approximately 800 million people. Our primary goal was to design a pricing methodology, real-time claims analytics dashboard and fraud detection for a state-level scheme and provide insights to optimize reinsurance capacity. The effort spanned two person-years and held significant value.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    image: "/assets/projects/AB/image.jpg",
     live: "",
     github: "",
   },
@@ -59,7 +59,7 @@ const projects = [
     description:
       "The project involved collaborating with a department within the Government of India. Our objective was to design and a hedging mechanism that effectively protects revenue for farmers arising from price fluctuations. The effort spanned two person-years and held significant value.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    image: "/assets/projects/Crop/image.jpg",
     live: "",
     github: "",
   },
@@ -70,7 +70,7 @@ const projects = [
     description:
       "The project centered around developing a medical indemnity insurance solution tailored for the Indian middle class. We meticulously analyzed various factors, including different cancer types, their incidence rates, and treatment costs, to determine an optimal pricing strategy. The resulting dashboard presents premium details, frequency, and severity across diverse options, considering variations in states and age groups. This comprehensive approach ensures effective risk management and affordability for policyholders.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    image: "/assets/projects/Cancer/image.jpg",
     live: "",
     github: "",
   },
@@ -81,7 +81,7 @@ const projects = [
     description:
       "The project focused on constructing a robust fraud detection model for insurance claims. Specifically, we developed a machine learning-based solution that enables users to assess the probability of fraud in motor insurance claims. This model enhances the accuracy and efficiency of fraud detection processes within the insurance domain.",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "",
+    image: "/assets/projects/Fraud/image.jpg",
     live: "",
     github: "",
   },
