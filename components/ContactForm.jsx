@@ -18,17 +18,25 @@ import { useToast } from "@/components/ui/use-toast";
 const ContactForm = () => {
   const { toast } = useToast();
   const form = useRef();
-  // console.log("SERVICE ID here: ", process.env.EMAILJS_SERVICE_ID);
-  // console.log("TEMPLATE ID here: ", process.env.EMAILJS_TEMPLATE_ID);
-  // console.log("PUBLIC KEY here: ", process.env.EMAILJS_PUBLIC_KEY);
+  console.log("SERVICE ID here: ", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+  console.log(
+    "TEMPLATE ID here: ",
+    process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+  );
+  console.log("PUBLIC KEY here: ", process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_tetauqe", "template_g5hivsl", form.current, {
-        publicKey: "8B9rgtop0ka1YIbkX",
-      })
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");
