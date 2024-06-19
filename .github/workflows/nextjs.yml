@@ -61,15 +61,13 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-      - name: Setup env
+      - name: Setup ENV
         run: |
-          touch .env.local
-          echo NEXT_PUBLIC_POSTHOG_KEY=${{ vars.NEXT_PUBLIC_POSTHOG_KEY }} >> .env.local
-          echo NEXT_PUBLIC_POSTHOG_HOST=${{ vars.NEXT_PUBLIC_POSTHOG_HOST }} >> .env.local
-          echo NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=${{ vars.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }} >> .env.local
-          echo NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{ vars.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }} >> .env.local
-          echo NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{ vars.NEXT_PUBLIC_EMAILJS_SERVICE_ID }} >> .env.local
-          echo "NEXT_PUBLIC_POSTHOG_HOST=${{ vars.NEXT_PUBLIC_POSTHOG_HOST }}"
+          NEXT_PUBLIC_POSTHOG_KEY:${{ vars.NEXT_PUBLIC_POSTHOG_KEY }}
+          NEXT_PUBLIC_POSTHOG_HOST:${{ vars.NEXT_PUBLIC_POSTHOG_HOST }}
+          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY:${{ vars.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID:${{ vars.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}
+          NEXT_PUBLIC_EMAILJS_SERVICE_ID:${{ vars.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
       - name: Restore cache
         uses: actions/cache@v4
         with:
